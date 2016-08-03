@@ -1,0 +1,6 @@
+// On a Mac, to see your computer's name on your network,
+// go to System Preferences, and then the "Sharing" menu,
+// and you should see a "Computer Name" input field
+{
+  "hostname": "YOUR_COMPUTERS_NAME_ON_YOUR_NETWORK.local"
+}
