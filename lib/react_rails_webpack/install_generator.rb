@@ -47,7 +47,7 @@ module ReactRailsWebpack
         'app/assets/javascripts/application.js',
         app_dot_js_insert,
         after: "//= require_tree .\n"
-      ) unless file_already_contains?("//= require_tree .\n", 'app/assets/javascripts/application.js')
+      ) unless file_already_contains?(app_dot_js_insert, 'app/assets/javascripts/application.js')
 
       # Add webpack folder require to application.css or .scss or .sass
       if File.exist?('app/assets/stylesheets/application.css')
