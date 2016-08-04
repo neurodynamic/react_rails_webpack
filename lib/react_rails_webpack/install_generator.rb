@@ -28,7 +28,7 @@ module ReactRailsWebpack
     def update_gitignore
       puts 'updating .gitignore...'
       append_to_file '.gitignore' do
-        "\n\n\# react_rails_webpack ignores\nclient/node_modules\nclient/environment.json"
+        "\n\n\# react_rails_webpack ignores\nclient/node_modules\nclient/environment.json\nnpm-debug.log"
       end
     end
 
@@ -61,16 +61,6 @@ module ReactRailsWebpack
 
       ensure_prepended "@import '../webpack/*\n", 'app/assets/stylesheets/application.scss' if File.exist?('app/assets/stylesheets/application.scss')
       ensure_prepended "@import '../webpack/*\n", 'app/assets/stylesheets/application.sass' if File.exist?('app/assets/stylesheets/application.sass')
-    end
-
-    def npm_install
-      puts "Running 'npm install'..."
-      Dir.chdir("#{current_directory_path}/client") { `npm install` }
-    end
-
-    def compile_demo_apps
-      puts "Running 'npm run build'..."
-      `npm run build`
     end
 
 
