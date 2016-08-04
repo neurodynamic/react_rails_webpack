@@ -33,10 +33,33 @@ module ReactRailsWebpack
       end
     end
 
-    def add_webpack_asset_path
-      # //= require_tree ../webpack
-      # @import '../webpack/react-client.1.0.0'
-      # config.assets.paths << "#{config.root}/app/assets/webpack"
+    def add_webpack_asset_inclusion
+      # Add webpack folder to application asset paths
+      insert_into_file(
+        'config/application.rb',
+        "    config.assets.paths << \"#{config.root}/app/assets/webpack\"\n",
+        after: "  class Application < Rails::Application\n"
+      )
+
+      # Add webpack folder require to application.js
+      insert_into_file(
+        'app/assets/javascripts/application.js',
+        "//= require_tree ../webpack\n",
+        after: "//= require_tree .\n"
+      )
+
+      # Add webpack folder require to application.css or .scss or .sass
+      if File.exist?('app/assets/stylesheets/application.css')
+        insert_into_file(
+          'app/assets/stylesheets/application.css',
+          "\n *= require_tree ../webpack\n",
+          before: ' *= require_self'
+        )
+      elsif File.exist?('app/assets/stylesheets/application.sass')
+        prepend_to_file('app/assets/stylesheets/application.sass', "@import '../webpack/*\n")
+      elsif File.exist?('app/assets/stylesheets/application.scss')
+        prepend_to_file('app/assets/stylesheets/application.scss', "@import '../webpack/*\n")
+      end
     end
   end
 end
