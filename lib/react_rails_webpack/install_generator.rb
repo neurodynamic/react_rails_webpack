@@ -5,15 +5,19 @@ module ReactRailsWebpack
   class InstallGenerator < Rails::Generators::Base
     desc "This generator sets up the files for a rails and react integration using webpack."
 
-    source_root(current_directory_path)
+    source_root(File.join(File.expand_path(File.dirname(__FILE__))))
 
     def setup_client_folder
-      puts "Adding client folder..."
+      puts 'Adding client folder...'
       directory 'client'
     end
 
+    def add_root_package_dot_json
+      copy_file 'package.json'
+    end
+
     def add_react_helper
-      puts "Adding react_helper.rb..."
+      puts 'Adding react_helper.rb...'
       inside 'app' do
         inside 'helpers' do
           copy_file 'react_helper.rb'
@@ -22,14 +26,14 @@ module ReactRailsWebpack
     end
 
     def update_gitignore
-      puts "updating .gitignore..."
+      puts 'updating .gitignore...'
       append_to_file '.gitignore' do
         "\n\n\# react_rails_webpack ignores\nclient/node_modules\nclient/environment.json"
       end
     end
 
     def add_webpack_asset_inclusion
-      puts "Adding asset includes..."
+      puts 'Adding asset includes...'
       # Add webpack folder to application asset paths
       app_dot_rb_insert = "    config.assets.paths << \"\#\{config.root\}/app/assets/webpack\"\n"
       insert_into_file(
@@ -61,12 +65,12 @@ module ReactRailsWebpack
 
     def npm_install
       puts "Running 'npm install'..."
-      Dir.chdir("#{current_directory_path}/client"){ `npm install` }
+      Dir.chdir("#{current_directory_path}/client") { `npm install` }
     end
 
     def compile_demo_apps
       puts "Running 'npm run build'..."
-      Dir.chdir("#{current_directory_path}/client"){ `npm run build` }
+      `npm run build`
     end
 
 

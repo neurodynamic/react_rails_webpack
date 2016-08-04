@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "cd client && npm run start",
+    "prebuild": "cd client && npm run prebuild",
+    "build": "cd client && npm run build",
+    "deploy": "cd client && npm run deploy",
+    "test": "cd client && npm run test",
+    "yolo": "cd client && npm run yolo"
+  }
+}
