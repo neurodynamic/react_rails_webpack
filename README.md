@@ -1,9 +1,5 @@
 # ReactRailsWebpack
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/react_rails_webpack`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +18,38 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Install
+
+Execute:
+
+    $ rails g react_rails_webpack:install
+
+to setup the files and folders needed to use react with your Rails project.
+
+### Setup
+
+This will setup a basic set of react example components under the "client" folder in your project's root. Once the install is done, run these commands:
+
+    $ cd client
+    $ npm install
+    $ cd ..
+    $ cd npm run build
+
+Then go to the `client/environment.json` file and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to System Preferences, and then the "Sharing" menu, and you should see it in the "Computer Name" field. `environment.json` should end up looking something like this:
+
+```
+{
+  "hostname": "my_mac.local"
+}
+```
+
+### Generate Example Page
+
+If you want to setup an example page that uses the provided React components, run:
+
+    $ rails g react_rails_webpack:create_example_page
+
+Then run the rails server and go to the "/greeting" page to see everything in action.
 
 ## Development
 
