@@ -1,5 +1,4 @@
 require 'rails/generators/base'
-require 'fileutils'
 
 module ReactRailsWebpack
   class InstallGenerator < Rails::Generators::Base
