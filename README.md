@@ -4,7 +4,7 @@
 
 ### Install
 
-1. Make sure you have the [requirements](https://github.com/neurodynamic/react_rails_webpack#requirements) installed
+1. Make sure you have the [requirements](#requirements) installed
 2. Add `gem 'react_rails_webpack'` to your Gemfile
 3. Run `bundle install`
 4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#generating-the-integration))
