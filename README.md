@@ -95,7 +95,7 @@ Then your `environment.json` file should look like this:
 
 ```
 {
-  "hostname": "my_mac.local"
+  "hostname": "my-mac.local"
 }
 ```
 
