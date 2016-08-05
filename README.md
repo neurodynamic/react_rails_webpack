@@ -7,9 +7,10 @@ When I looked over the available gems for react/rails integrations, none of them
 Pros:
 
 - Webpack integration
+- Hot-reloading webpack development server
 - Built-in redux integration
 - Generators provide example code for basic react components and react-redux components
-- Easy customizability
+- Highly customizable
 - Ability to use any npm packages that you could use on a static front-end app
 
 Cons:
@@ -18,7 +19,7 @@ Cons:
 
 
 
-## Installation
+## Installing the Gem
 
 Add this line to your application's Gemfile:
 
@@ -36,16 +37,16 @@ Or install it yourself as:
 
 ## Usage
 
-### Install
+### Generating the Integration
 
 Run the install generator like this:
 
     $ rails g react_rails_webpack:install
 
-This will setup a basic react integration with some example components (one standard react component and one using react with redux) under the "client" folder in your project's root. Once the generator's run is done, run these commands to install the needed npm packages (`npm run install`) and then to compile the code to your assets folder (`npm run build`):
+This will setup a basic react integration with some example components (one standard react component and one using react with redux) under the "client" folder in your project's root. Once the generator's run is done, run the commands below:
 
-    $ npm run install
-    $ npm run build
+    $ npm run install   # installs the needed npm packages
+    $ npm run build     # uses webpack to compile your javascript code to your assets folder
 
 Then go to the `client/environment.json` file and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
 
@@ -55,7 +56,7 @@ Then go to the `client/environment.json` file and fill in your computer's networ
 }
 ```
 
-### Generate Example Page
+### Generating an Example Page
 
 If you want to setup an example page in your Rails app that uses the provided React components, run:
 
@@ -63,16 +64,14 @@ If you want to setup an example page in your Rails app that uses the provided Re
 
 Then run the rails server and go to the "/greeting" page to see everything in action.
 
-## Usage
-
-### Creating and using your own component
+### Creating and using your own components
 
 Let's say you want to make a checkout form component with react. Here's what you'd need to do to use it from Rails:
 
 1. Create the component in the `client/src/components` directory
 2. Add the component to the list of components in the `client/src/app/availableComponents.js` file (this file is what makes components available to Rails)
 
-For example, if you called your component CheckoutForm, your `client/src/app/availableComponents.js` file might look like this:
+For example, if you called your component `CheckoutForm`, your `client/src/app/availableComponents.js` file might look like this:
 
 ```javascript
 import CheckoutForm from '../components/CheckoutForm'
@@ -90,9 +89,9 @@ Or like this if it's a component that uses redux:
 import {CheckoutFormContainer} from '../components/CheckoutForm'
 
 export default {
-  CheckoutFormContainer: {
+  CheckoutForm: {
     redux: true,
-    class: CheckoutForm
+    class: CheckoutFormContainer
   }
 }
 ```
