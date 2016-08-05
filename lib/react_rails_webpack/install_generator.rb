@@ -62,6 +62,10 @@ module ReactRailsWebpack
       ensure_prepended "@import '../webpack/*\n", 'app/assets/stylesheets/application.sass' if File.exist?('app/assets/stylesheets/application.sass')
     end
 
+    def print_reminders
+      puts "Done! Now make sure you have npm installed, and then run the 'npm run install' and 'npm run build' commands to finish setting up."
+    end
+
 
     private
 
