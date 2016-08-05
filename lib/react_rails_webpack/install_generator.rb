@@ -63,7 +63,7 @@ module ReactRailsWebpack
     end
 
     def print_reminders
-      puts "Done! Now make sure you have npm installed, and then run the 'npm run install' and 'npm run build' commands to finish setting up."
+      puts "\n\nDone! Now make sure you have node and npm installed, and then run the 'npm run install' and 'npm run build' commands to finish setting up."
     end
 
 

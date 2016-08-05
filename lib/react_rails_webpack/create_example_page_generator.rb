@@ -32,7 +32,7 @@ module ReactRailsWebpack
     end
 
     def print_next_steps
-      puts "Done! Start your Rails server and go to localhost:3000/greeting to see your React/Rails integration in action!"
+      puts "\n\nDone! Start your Rails server and go to localhost:3000/greeting to see your React/Rails integration in action!"
     end
   end
 end
