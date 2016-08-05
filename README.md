@@ -2,9 +2,7 @@
 
 ## Quick Setup
 
-### Setup Integration
-
-From your Rails app's root directory:
+### Setup integration
 
 1. Make sure you have the [requirements](https://github.com/neurodynamic/react_rails_webpack#requirements) installed
 2. Add `gem 'react_rails_webpack'` to your Gemfile
