@@ -1,6 +1,8 @@
 # ReactRailsWebpack
 
-## Quick Start
+## Quick Setup
+
+### Setup Integration
 
 From your Rails app's root directory:
 
@@ -10,9 +12,11 @@ From your Rails app's root directory:
 4. Run `rails g react_rails_webpack:install`
 5. Run `npm run install`
 6. Run `npm run build`
-7. Run `rails g react_rails_webpack:create_example_page`
-8. Start the Rails server (run `rails server`)
-9. Go to `localhost:3000/greeting` to see your React/Rails integration in action
+
+### Add example page
+1. Run `rails g react_rails_webpack:create_example_page`
+2. Start the Rails server (run `rails server`)
+3. Go to `localhost:3000/greeting` to see your React/Rails integration in action
 
 ## About
 
