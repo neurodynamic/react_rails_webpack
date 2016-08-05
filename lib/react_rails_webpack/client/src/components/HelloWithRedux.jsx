@@ -11,8 +11,8 @@ export const HelloWithRedux = React.createClass({
   render () {
     return <div>
       <h2>This is the "HelloWithRedux" component from 'components/HelloWithRedux.jsx'</h2>
-      <p>Details: {this.props.details}</p>
-      <p>This is the greeting from the props supplied by redux: {this.props.greeting}</p>
+      <p><strong>Details</strong>: {this.props.details}</p>
+      <p>Current greeting: {this.props.greeting}</p>
 
       <label htmlFor='greeting'>Change the greeting here: </label>
       <input type='text' id='greeting' value={this.props.greeting} onChange={(e) => this.props.setGreeting(e.target.value)}/>
