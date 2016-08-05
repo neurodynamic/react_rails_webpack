@@ -99,6 +99,8 @@ Then your `environment.json` file should look like this:
 }
 ```
 
+And if your webpack dev server is running, you should be able to see the output at `my-mac.local:3000` on any machine or mobile device on your network.
+
 ## Generating an Example Page
 
 If you want to setup an example page in your Rails app that uses the provided React components, run:
