@@ -44,6 +44,8 @@ Run the install generator like this:
 
 This will setup a basic react integration with some example components (one standard react component and one using react with redux) under a `client` folder in your project's root. Once the generator's run is done, run the commands below (from your project's root):
 
+**Note**: Make sure you have [node](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine before running these.
+
     $ npm run install   # installs the needed npm packages
     $ npm run build     # uses webpack to compile your javascript code to your assets folder
 
