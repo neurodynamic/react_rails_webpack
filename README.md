@@ -13,9 +13,15 @@
 7. Set the dev server hostname ([instructions](#setting-the-dev-server-hostname))
 
 ### Add example page
+
 1. Run `rails g react_rails_webpack:create_example_page`
 2. Start the Rails server (run `rails server`)
-3. Go to `localhost:3000/greeting` to see your React/Rails integration in action
+3. Go to [localhost:3000/greeting](localhost:3000/greeting) to see your React/Rails integration in action
+
+### Suggested Development Workflow
+
+1. Write and test new components by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in the [webpack.config.js](lib/react_rails_webpack/client/webpack.config.js) file)
+2. When components are working
 
 ## About
 
@@ -57,26 +63,24 @@ Or install it yourself as:
 - [node](https://nodejs.org/) (tested on 4.2.2)
 - [npm](https://www.npmjs.com/) (tested on 3.4.0)
 
-## Usage
-
-### Generating the Integration
+## Generating the Integration
 
 Run the install generator like this:
 
     $ rails g react_rails_webpack:install
 
-This will setup a basic react integration with some example components (one standard react component and one using react with redux) under a `client` folder in your project's root. Once the generator's run is done, run the commands below (from your project's root):
+This will setup a basic react integration with some example components (one standard react component and one using react with redux) under (a client folder)[lib/react_rails_webpack/client] in your project's root. Once the generator's run is done, run the commands below (from your project's root):
 
 **Note**: Make sure you have [node](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine before running these.
 
     $ npm run install   # installs the needed npm packages
     $ npm run build     # uses webpack to compile your javascript code to your assets folder
 
-Then [set the dev server hostname](#setting-the-dev-server-hostname)
+Then set the dev server hostname ([instructions](#setting-the-dev-server-hostname)).
 
-### Setting the dev server hostname
+## Setting the dev server hostname
 
-Then go to the `client/environment.json` file and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
+Then go to the [client/environment.json](lib/react_rails_webpack/client/environment.json) file and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
 
 ```
 {
@@ -84,20 +88,20 @@ Then go to the `client/environment.json` file and fill in your computer's networ
 }
 ```
 
-### Generating an Example Page
+## Generating an Example Page
 
 If you want to setup an example page in your Rails app that uses the provided React components, run:
 
     $ rails g react_rails_webpack:create_example_page
 
-Then run the rails server and go to the `/greeting` page to see everything in action.
+Then run the rails server and go to the [/greeting](localhost:3000/greeting) page to see everything in action.
 
-### Creating and using your own components
+## Creating and using your own components
 
 Let's say you want to make a checkout form component with react. Here's what you'd need to do to use it from Rails:
 
-- Create the component in the `client/src/components` directory
-- Add the component to the list of components in the `client/src/app/availableComponents.js` file (this file is what makes components available to Rails)
+- Create the component in the [client/src/components](lib/react_rails_webpack/client/src/components) directory
+- Add the component to the list of components in the [client/src/app/availableComponents.js](lib/react_rails_webpack/client/src/app/availableComponents.js) file (this file is what makes components available to Rails)
 
 For example, if you called your component `CheckoutForm`, your `client/src/app/availableComponents.js` file might look like this:
 
@@ -130,7 +134,7 @@ export default {
 render_component "CheckoutForm", { customerName: 'Harper' }
 ```
 
-### Adding Trailblazer Integration
+## Adding Trailblazer Integration
 
 Running this generator:
 
@@ -139,17 +143,17 @@ Running this generator:
 Will add a trailblazer cell for react components to your `lib` folder.
 
 
-### Working with the Webpack Dev Server
+## Working with the Webpack Dev Server
 
 `npm run start` will start a webpack development server with hot reloading that is completely independent of your Rails app. You can see the output of this server on any computer or mobile device on your local network by going to `hostname:3000` (replace `hostname` with whatever you set it to in the `hostname.json` file).
 
-### Gotchas
+## Gotchas
 
-#### Forgetting to run `npm run build`
+### Forgetting to run `npm run build`
 
 Remember, while your changes to components will hot reload when you use the webpack dev server, they will not show up at all in your Rails app until you run the `npm run build` command.
 
-#### Forgetting to add components to the `client/src/app/availableComponents.js` file
+### Forgetting to add components to the `client/src/app/availableComponents.js` file
 
 Components will not be accessible from Rails if you forget to add them here.
 
