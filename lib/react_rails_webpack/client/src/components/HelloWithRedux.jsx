@@ -5,11 +5,13 @@ import * as actionCreators from '../redux/reducer'
 export const HelloWithRedux = React.createClass({
   propTypes: {
     greeting: React.PropTypes.string.isRequired,
+    details: React.PropTypes.string.isRequired,
     setGreeting: React.PropTypes.func.isRequired
   },
   render () {
     return <div>
       <h2>This is the "HelloWithRedux" component from 'components/HelloWithRedux.jsx'</h2>
+      <p>Details: {this.props.details}</p>
       <p>This is the greeting from the props supplied by redux: {this.props.greeting}</p>
 
       <label htmlFor='greeting'>Change the greeting here: </label>
