@@ -1,5 +1,16 @@
 # ReactRailsWebpack
 
+## Quick Start
+
+1. Make sure you have the [requirements](https://github.com/neurodynamic/react_rails_webpack#requirements) installed
+2. Run `gem install react_rails_webpack`
+3. Run `rails g react_rails_webpack:install`
+4. Run `npm run install`
+5. Run `npm run build`
+6. Run `rails g react_rails_webpack:create_example_page`
+7. Start the Rails server (`rails server`)
+8. Go to `localhost:3000/greeting` to see your React/Rails integration in action
+
 ## About
 
 When I looked over the available gems for react/rails integrations, none of them were as customizable as I wanted, so I decided to build my own. Since I wanted it to be as customizable as possible, I made my gem a set of generators, instead of a bunch of under-the-hood gem code. You can customize the inner workings of this integration to your heart's content, since all the files used for the integration will be added directly to your app. You can edit them, delete them, and add or remove any npm packages you like, because this integration allows you to use any npm packages you could use in a static front-end react app.
@@ -33,6 +44,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install react_rails_webpack
+
+## Requirements
+
+- [Rails](http://rubyonrails.org/) 4.0+
+- [node](https://nodejs.org/) (tested on 4.2.2)
+- [npm](https://www.npmjs.com/) (tested on 3.4.0)
 
 ## Usage
 
