@@ -16,7 +16,7 @@
 
 1. Run `rails g react_rails_webpack:create_example_page`
 2. Start the Rails server (run `rails server`)
-3. Go to [localhost:3000/greeting](localhost:3000/greeting) to see your React/Rails integration in action
+3. Go to [localhost:3000/greeting](http://localhost:3000/greeting) to see your React/Rails integration in action
 
 ### Suggested Development Workflow
 
