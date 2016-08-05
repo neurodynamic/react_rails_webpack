@@ -89,7 +89,7 @@ Go to [the client/environment.json file](lib/react_rails_webpack/client/environm
 
 If your `System Preferences` > `Sharing` menu looks like this:
 
-![Computer network name is listed as "my_mac"](images/computer_network_name.png "Computer Network Name")
+![Computer network name is listed as "my-mac"](images/network_name.png "Computer Network Name")
 
 Then your `environment.json` file should look like this:
 
