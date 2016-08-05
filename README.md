@@ -1,5 +1,7 @@
 # ReactRailsWebpack
 
+A set of Rails generators that create all the necessary boilerplate code for integrating React, Webpack, and Redux libraries into Rails 4.0+ apps.
+
 ## Quick Start
 
 ### Install
@@ -30,7 +32,7 @@
 
 When I looked over the available gems for react/rails integrations, none of them were as customizable as I wanted, so I decided to build my own. Since I wanted it to be as customizable as possible, I made my gem a set of generators, instead of a bunch of under-the-hood gem code. You can customize the inner workings of this integration to your heart's content, since all the files used for the integration will be added directly to your app. You can edit them, delete them, and add or remove any npm packages you like, because this integration allows you to use any npm packages you could use in a static front-end react app.
 
-**Pros:**
+### Pros:
 
 - Webpack integration
 - Hot-reloading webpack development server
@@ -40,7 +42,7 @@ When I looked over the available gems for react/rails integrations, none of them
 - Highly customizable
 - Ability to use any npm packages that you could use on a static front-end app
 
-**Cons:**
+### Cons:
 
 - This gem does not do server-side rendering, so if you need to do SEO stuff within your react components, it's probably the wrong choice
 
