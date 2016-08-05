@@ -1,4 +1,5 @@
 require 'rails/generators/base'
+require 'colorize'
 
 module ReactRailsWebpack
   class InstallGenerator < Rails::Generators::Base
@@ -63,8 +64,15 @@ module ReactRailsWebpack
     end
 
     def print_reminders
-      puts "\n\nDone! Now make sure you have node and npm installed, and then run the 'npm run install' and 'npm run build' commands to finish setting up."
-      puts "Also, don't forget to set your hostname in the client/environment.json file. Instructions for this can be found here: https://github.com/neurodynamic/react_rails_webpack#setting-the-dev-server-hostname"
+      puts
+      puts "-" * `tput cols`.to_i # print line of dashes
+      puts
+      puts "Done! Now #{"make sure you have node and npm installed".red.bold}, and then #{"run the".red.bold} #{"npm run install".white.bold} #{"and".red.bold} #{"npm run build".white.bold} #{"commands".red.bold} to finish setting up."
+      puts
+      puts "Also, #{"don't forget to set your hostname".red.bold} in the #{"client/environment.json".white.bold} file. Instructions for this can be found here: #{"https://github.com/neurodynamic/react_rails_webpack#setting-the-dev-server-hostname".blue}"
+      puts
+      puts "-" * `tput cols`.to_i # print line of dashes
+      puts
     end
 
 

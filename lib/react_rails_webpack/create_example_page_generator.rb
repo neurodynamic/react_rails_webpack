@@ -32,7 +32,13 @@ module ReactRailsWebpack
     end
 
     def print_next_steps
-      puts "\n\nDone! Start your Rails server and go to localhost:3000/greeting to see your React/Rails integration in action!"
+      puts
+      puts "-" * `tput cols`.to_i # print line of dashes
+      puts
+      puts "Done! Start your Rails server and go to #{"localhost:3000/greeting".blue} to see your React/Rails integration in action!"
+      puts
+      puts "-" * `tput cols`.to_i # print line of dashes
+      puts
     end
   end
 end
