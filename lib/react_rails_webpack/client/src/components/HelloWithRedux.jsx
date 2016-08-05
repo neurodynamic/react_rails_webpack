@@ -1,6 +1,8 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import * as actionCreators from '../redux/reducer'
 
-export default React.createClass({
+export const HelloWithRedux = React.createClass({
   propTypes: {
     greeting: React.PropTypes.string.isRequired,
     setGreeting: React.PropTypes.func.isRequired
@@ -10,8 +12,17 @@ export default React.createClass({
       <h2>This is the "HelloWithRedux" component from 'components/HelloWithRedux.jsx'</h2>
       <p>This is the greeting from the props supplied by redux: {this.props.greeting}</p>
 
-      <label htmlFor='greeting'>Change the greeting here</label>
+      <label htmlFor='greeting'>Change the greeting here: </label>
       <input type='text' id='greeting' value={this.props.greeting} onChange={(e) => this.props.setGreeting(e.target.value)}/>
     </div>
   }
 })
+
+function mapStateToProps (state) {
+  return { greeting: state.exampleReducer.greeting }
+}
+
+export const HelloWithReduxContainer = connect(
+  mapStateToProps,
+  actionCreators
+)(HelloWithRedux)
