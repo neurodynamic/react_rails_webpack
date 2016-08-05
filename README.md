@@ -102,6 +102,14 @@ export default {
 render_component "CheckoutForm", { customerName: 'Harper' }
 ```
 
+### Adding Trailblazer Integration
+
+Running this generator:
+
+    $ rails g react_rails_webpack:trailblazer_integration
+
+Will add a trailblazer cell for react components to your lib folder.
+
 
 ### Working with the Webpack Dev Server
 
