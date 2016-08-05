@@ -3,6 +3,8 @@ require 'fileutils'
 
 module ReactRailsWebpack
   class CreateExamplePageGenerator < Rails::Generators::Base
+    desc "This generator sets up a demo page for react/rails integration in a Rails app."
+    
     source_root(File.join(File.expand_path(File.dirname(__FILE__))))
 
     def add_files
