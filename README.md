@@ -158,7 +158,7 @@ Will add a [trailblazer](https://github.com/apotonick/trailblazer) cell for reac
 
 ## Working with the Webpack Dev Server
 
-`npm run start` will start a webpack development server with hot reloading that is completely independent of your Rails app. You can see the output of this server on any computer or mobile device on your local network by going to `hostname:3000` (replace `hostname` with whatever you set it to in the `hostname.json` file).
+`npm run start` will start a webpack development server with hot reloading that is completely independent of your Rails app. You can see the output of this server on any computer or mobile device on your local network by going to `computer-name.local:3000` (replace `computer-name.local` with [whatever you set hostname to](#setting-the-dev-server-hostname) in the `environment.json` file).
 
 ## Gotchas
 
