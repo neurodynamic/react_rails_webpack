@@ -1,2 +1,2 @@
-<div class="react-component-target" data-componentname="Hello" data-componentprops=<%= @props_for_hello_component.to_json %>></div>
-<div class="react-component-target" data-componentname="HelloWithRedux" data-componentprops=<%= @props_for_hello_with_redux_component.to_json %>></div>
+<%= react_component "Hello", @props_for_hello_component %>
+<%= react_component "HelloWithRedux", @props_for_hello_with_redux_component %>
