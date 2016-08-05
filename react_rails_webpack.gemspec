@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Neurodynamic"]
   spec.email         = ["neurodynamicdev@gmail.com"]
 
-  spec.summary       = %q{A gem supplying generators to setup a basic integration of react/webpack with Rails}
+  spec.summary       = %q{A gem supplying generators to setup flexible integrations of react, webpack, and redux with Rails}
   # spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/neurodynamic/react_rails_webpack"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
