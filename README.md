@@ -1,15 +1,16 @@
 # ReactRailsWebpack
 
-## Quick Setup
+## Quick Start
 
-### Setup integration
+### Install
 
 1. Make sure you have the [requirements](https://github.com/neurodynamic/react_rails_webpack#requirements) installed
 2. Add `gem 'react_rails_webpack'` to your Gemfile
 3. Run `bundle install`
-4. Run `rails g react_rails_webpack:install`
+4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#generating-the-integration))
 5. Run `npm run install`
 6. Run `npm run build`
+7. Set the dev server hostname ([instructions](#setting-the-dev-server-hostname))
 
 ### Add example page
 1. Run `rails g react_rails_webpack:create_example_page`
@@ -70,6 +71,10 @@ This will setup a basic react integration with some example components (one stan
 
     $ npm run install   # installs the needed npm packages
     $ npm run build     # uses webpack to compile your javascript code to your assets folder
+
+Then [set the dev server hostname](#setting-the-dev-server-hostname)
+
+### Setting the dev server hostname
 
 Then go to the `client/environment.json` file and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
 
