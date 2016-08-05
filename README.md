@@ -21,7 +21,10 @@
 ### Suggested Development Workflow
 
 1. Write and test new components by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in [the webpack.config.js file](lib/react_rails_webpack/client/webpack.config.js))
-2. When components are working
+2. Add any components you want to spin up with the `react_component` helper in Rails to [the available components file](lib/react_rails_webpack/client/src/app/availableComponents.js) ([further explanation](#creating-and-using-your-own-components))
+3. Run the `npm run build` command to compile your javascript files and add them to the Rails assets folder
+4. Add calls to the `react_component` helper method in your Rails app to render your React components in views
+5. Make sure they still work, repeat steps 1-5 until satisfied
 
 ## About
 
@@ -80,7 +83,7 @@ Then set the dev server hostname ([instructions](#setting-the-dev-server-hostnam
 
 ## Setting the dev server hostname
 
-Then go to the [client/environment.json](lib/react_rails_webpack/client/environment.json) file and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
+Then go to [the client/environment.json file](lib/react_rails_webpack/client/environment.json) and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
 
 ```
 {
@@ -94,7 +97,7 @@ If you want to setup an example page in your Rails app that uses the provided Re
 
     $ rails g react_rails_webpack:create_example_page
 
-Then run the rails server and go to the [/greeting](localhost:3000/greeting) page to see everything in action.
+Then run the rails server and go to [the greeting page](localhost:3000/greeting) to see everything in action.
 
 ## Creating and using your own components
 
@@ -140,7 +143,7 @@ Running this generator:
 
     $ rails g react_rails_webpack:trailblazer_integration
 
-Will add a trailblazer cell for react components to your `lib` folder.
+Will add a [trailblazer](https://github.com/apotonick/trailblazer) cell for react components to your `lib` folder.
 
 
 ## Working with the Webpack Dev Server
