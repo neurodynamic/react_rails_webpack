@@ -64,6 +64,7 @@ module ReactRailsWebpack
 
     def print_reminders
       puts "\n\nDone! Now make sure you have node and npm installed, and then run the 'npm run install' and 'npm run build' commands to finish setting up."
+      puts "Also, don't forget to set your hostname in the client/environment.json file. Instructions for this can be found here: https://github.com/neurodynamic/react_rails_webpack#setting-the-dev-server-hostname"
     end
 
 
