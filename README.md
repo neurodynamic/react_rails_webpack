@@ -85,7 +85,7 @@ Then set the dev server hostname ([instructions](#setting-the-dev-server-hostnam
 
 ## Setting the dev server hostname
 
-Then go to [the client/environment.json file](lib/react_rails_webpack/client/environment.json) and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
+Go to [the client/environment.json file](lib/react_rails_webpack/client/environment.json) and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. `environment.json` should end up looking something like this:
 
 ```
 {
