@@ -20,7 +20,7 @@
 
 ### Suggested Development Workflow
 
-1. Write and test new components by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in the [webpack.config.js](lib/react_rails_webpack/client/webpack.config.js) file)
+1. Write and test new components by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in [the webpack.config.js file](lib/react_rails_webpack/client/webpack.config.js))
 2. When components are working
 
 ## About
@@ -69,7 +69,7 @@ Run the install generator like this:
 
     $ rails g react_rails_webpack:install
 
-This will setup a basic react integration with some example components (one standard react component and one using react with redux) under (a client folder)[lib/react_rails_webpack/client] in your project's root. Once the generator's run is done, run the commands below (from your project's root):
+This will setup a basic react integration with some example components (one standard react component and one using react with redux) under [a client folder](lib/react_rails_webpack/client) in your project's root. Once the generator's run is done, run the commands below (from your project's root):
 
 **Note**: Make sure you have [node](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine before running these.
 
