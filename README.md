@@ -1,6 +1,6 @@
 # ReactRailsWebpack
 
-A set of Rails generators that create all the necessary boilerplate code for integrating React, Webpack, and Redux libraries into Rails 4.0+ apps.
+A set of Rails generators that create all the necessary boilerplate code (with examples) for integrating React, Webpack, and Redux libraries into Rails 4.0+ apps.
 
 ## Quick Start
 
