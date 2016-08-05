@@ -5,13 +5,14 @@
 From your Rails app's root directory:
 
 1. Make sure you have the [requirements](https://github.com/neurodynamic/react_rails_webpack#requirements) installed
-2. Run `gem install react_rails_webpack`
-3. Run `rails g react_rails_webpack:install`
-4. Run `npm run install`
-5. Run `npm run build`
-6. Run `rails g react_rails_webpack:create_example_page`
-7. Start the Rails server (run `rails server`)
-8. Go to `localhost:3000/greeting` to see your React/Rails integration in action
+2. Add `gem 'react_rails_webpack'` to your Gemfile
+3. Run `bundle install`
+4. Run `rails g react_rails_webpack:install`
+5. Run `npm run install`
+6. Run `npm run build`
+7. Run `rails g react_rails_webpack:create_example_page`
+8. Start the Rails server (run `rails server`)
+9. Go to `localhost:3000/greeting` to see your React/Rails integration in action
 
 ## About
 
