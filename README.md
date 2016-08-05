@@ -34,13 +34,13 @@ When I looked over the available gems for react/rails integrations, none of them
 
 ### Pros:
 
-- Webpack integration
+- [Webpack](https://webpack.github.io/) integration
 - Hot-reloading webpack development server
 - Ability to see dev server output on any computer (or mobile device) on your network
-- Built-in redux integration
+- Built-in [redux](http://redux.js.org/) integration
 - Generators provide example code for basic react components and react-redux components
 - Highly customizable
-- Ability to use any npm packages that you could use on a static front-end app
+- Ability to use any [npm](https://www.npmjs.com/) packages that you could use on a static front-end app
 
 ### Cons:
 
