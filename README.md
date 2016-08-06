@@ -103,7 +103,7 @@ If you want to setup an example page in your Rails app that uses the provided Re
 
     $ rails g react_rails_webpack:create_example_page
 
-Then run the rails server and go to [the greeting page](localhost:3000/greeting) to see everything in action.
+Then run the rails server and go to [the greeting page](http://localhost:3000/greeting) to see everything in action.
 
 ## Creating and using your own components
 
