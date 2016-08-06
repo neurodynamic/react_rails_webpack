@@ -58,10 +58,6 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install react_rails_webpack
-
 ## Requirements
 
 - [Rails](http://rubyonrails.org/) 4.0+
