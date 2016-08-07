@@ -22,11 +22,12 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 ### Suggested Development Workflow
 
-1. Write and test new components by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in [the webpack.config.js file](lib/react_rails_webpack/client/webpack.config.js))
-2. Add any components you want to spin up with the `react_component` helper in Rails to [the available components file](lib/react_rails_webpack/client/src/app/availableComponents.js) ([further explanation](#creating-and-using-your-own-components))
-3. Run the `npm run build` command to compile your javascript files and add them to the Rails assets folder
-4. Add calls to the `react_component` helper method in your Rails app to render your React components in views
-5. Make sure they still work, repeat steps 1-5 until satisfied
+1. Write the code for your React components in the [client/src/components](lib/react_rails_webpack/client/src/components) directory
+2. Test your new components with live reloading by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in [the webpack.config.js file](lib/react_rails_webpack/client/webpack.config.js))
+3. Add any components you want to spin up with the `react_component` helper in Rails to [the available components file](lib/react_rails_webpack/client/src/app/availableComponents.js) ([further explanation](#creating-and-using-your-own-components))
+4. Run the `npm run build` command to compile your javascript files and add them to the Rails assets folder
+5. Add calls to the `react_component` helper method in your Rails app to render your React components in views
+6. Make sure they still work, repeat steps 1-5 until satisfied
 
 ## About
 
