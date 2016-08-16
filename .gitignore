@@ -8,3 +8,5 @@
 /spec/reports/
 /tmp/
 /lib/react_rails_webpack/client/node_modules
+.flooignore
+.floo
