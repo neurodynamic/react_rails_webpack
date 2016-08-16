@@ -32,6 +32,15 @@ module ReactRailsWebpack
       end
     end
 
+    def set_environment_hostname
+      localhost_name = `scutil --get LocalHostName`
+      puts "Setting localhost name to #{localhost_name}..."
+
+      gsub_file 'client/environment.json', /<<<LOCALHOST_NAME>>>/ do
+        match << localhost_name
+      end
+    end
+
     def add_webpack_asset_inclusion
       puts 'Adding asset includes...'
       # Add webpack folder to application asset paths
@@ -68,8 +77,6 @@ module ReactRailsWebpack
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
       puts "Done! Now #{"make sure you have node and npm installed".red.bold}, and then #{"run the".red.bold} #{"npm run install".white.bold} #{"and".red.bold} #{"npm run build".white.bold} #{"commands".red.bold} to finish setting up."
-      puts
-      puts "Also, #{"don't forget to set your hostname".red.bold} in the #{"client/environment.json".white.bold} file. Instructions for this can be found here: #{"https://github.com/neurodynamic/react_rails_webpack#setting-the-dev-server-hostname".blue}"
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts

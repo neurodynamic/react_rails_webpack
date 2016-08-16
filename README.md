@@ -2,6 +2,12 @@
 
 A set of Rails generators that create all the necessary boilerplate code (with examples) for integrating React, Webpack, and Redux libraries into Rails 4.0+ apps.
 
+## Key Features
+
+1. Use any packages from the npm ecosystem
+2. Automatically setup working demo examples so you can jump into React immediately
+3. Development server for React components will live update your changes to any device on your local network (including phones)
+
 ## Quick Start
 
 ### Install
@@ -12,7 +18,6 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#generating-the-integration))
 5. Run `npm run install`
 6. Run `npm run build`
-7. Set the dev server hostname ([instructions](#setting-the-dev-server-hostname))
 
 ### Add example page
 
@@ -79,24 +84,6 @@ This will setup a basic react integration with some example components (one stan
     $ npm run build     # uses webpack to compile your javascript code to your assets folder
 
 Then set the dev server hostname ([instructions](#setting-the-dev-server-hostname)).
-
-## Setting the dev server hostname
-
-Go to [the client/environment.json file](lib/react_rails_webpack/client/environment.json) and fill in your computer's network name. If you're using a Mac, to find out what your computer's network name is, you can go to `System Preferences`, and then the `Sharing` menu, and you should see it in the `Computer Name` field. For example:
-
-If your `System Preferences` > `Sharing` menu looks like this:
-
-![Computer network name is listed as "my-mac"](images/network_name.png "Computer Network Name")
-
-Then your `environment.json` file should look like this:
-
-```
-{
-  "hostname": "my-mac.local"
-}
-```
-
-And if your webpack dev server is running, you should be able to see the output at `my-mac.local:3000` on any machine or mobile device on your network.
 
 ## Generating an Example Page
 
