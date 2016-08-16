@@ -36,7 +36,7 @@ module ReactRailsWebpack
       localhost_name = `scutil --get LocalHostName`
       puts "Setting localhost name to #{localhost_name}..."
 
-      gsub_file 'client/environment.json', /<<<LOCALHOST_NAME>>>/ do
+      gsub_file 'client/environment.json', /<<<LOCALHOST_NAME>>>/ do |match|
         match << localhost_name
       end
     end
