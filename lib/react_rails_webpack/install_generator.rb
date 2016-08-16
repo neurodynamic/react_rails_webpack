@@ -33,12 +33,10 @@ module ReactRailsWebpack
     end
 
     def set_environment_hostname
-      localhost_name = `scutil --get LocalHostName`
+      localhost_name = `scutil --get LocalHostName`.strip
       puts "Setting localhost name to #{localhost_name}..."
 
-      gsub_file 'client/environment.json', /<<<LOCALHOST_NAME>>>/ do |match|
-        match << localhost_name
-      end
+      gsub_file 'client/environment.json', /<<<LOCALHOST_NAME>>>/, localhost_name
     end
 
     def add_webpack_asset_inclusion
