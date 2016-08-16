@@ -62,8 +62,8 @@ And then execute:
 ## Requirements
 
 - [Rails](http://rubyonrails.org/) 4.0+
-- [node](https://nodejs.org/) (tested on 4.2.2)
-- [npm](https://www.npmjs.com/) (tested on 3.4.0)
+- [node](https://nodejs.org/) (tested on 4.2.2 and 5.4.1)
+- [npm](https://www.npmjs.com/) (tested on 3.4.0 and 3.5.3)
 
 ## Generating the Integration
 
