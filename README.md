@@ -7,7 +7,7 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 1. One-command setup
 2. Use any packages from the npm ecosystem
 3. Automatically sets up working demo examples so you can jump into React immediately
-4. Development server for React components will live update your changes to any device on your local network (including phones)
+4. The webpack development server for React components will live update your changes to any device on your local network (including phones)
 
 ## Install
 
