@@ -18,9 +18,9 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 ## Requirements
 
-- Rails >= 4
-- node >= 4
-- npm >= 4
+- Rails version 4 or greater
+- node version 4 or greater
+- npm version 3 or greater
 
 ## See demo components
 
