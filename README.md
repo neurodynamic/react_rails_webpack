@@ -53,7 +53,7 @@ Sets up an example page in your Rails app at [localhost:3000/greeting](http://lo
 
 `rails g react_rails_webpack:new_fork`
 
-**You must run this whenever you clone a repo with a react_rails_webpack integration setup**. It generates [the environment.json file](lib/react_rails_webpack/client/src/environment.json) based on your computer's network name. Since the network name will be different for most computers, this file is gitignored and needs to be regenerated for each new computer the project is cloned on.
+**You must run this whenever you clone a repo with a react_rails_webpack integration setup**. It generates [the environment.json file](lib/react_rails_webpack/client/environment.json) based on your computer's network name. Since the network name will be different for most computers, this file is gitignored and needs to be regenerated for each new computer the project is cloned on.
 
 ### See the url of your webpack development server
 
