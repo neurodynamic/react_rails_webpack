@@ -96,7 +96,7 @@ module ReactRailsWebpack
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
       
-      exec('npm run install && npm run build; rails g react_rails_webpack:whats_next')
+      exec('npm run install && npm run build; rake react_rails_webpack:print_whats_next_instructions')
     end
 
 
