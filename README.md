@@ -16,6 +16,12 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 3. Run `bundle install`
 4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#how-does-this-work))
 
+## Requirements
+
+- Rails >= 4
+- node >= 4
+- npm >= 4
+
 ## See demo components
 
 ### On webpack dev server
