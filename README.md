@@ -4,9 +4,10 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 ## Key Features
 
-1. Use any packages from the npm ecosystem
-2. Automatically setup working demo examples so you can jump into React immediately
-3. Development server for React components will live update your changes to any device on your local network (including phones)
+1. One-command setup
+2. Use any packages from the npm ecosystem
+3. Automatically sets up working demo examples so you can jump into React immediately
+4. Development server for React components will live update your changes to any device on your local network (including phones)
 
 ## Quick Start
 
@@ -15,9 +16,7 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 1. Make sure you have the [requirements](#requirements) installed
 2. Add `gem 'react_rails_webpack'` to your Gemfile
 3. Run `bundle install`
-4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#generating-the-integration))
-5. Run `npm run install`
-6. Run `npm run build`
+4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#how-does-this-work))
 
 ### Add example page
 
@@ -52,38 +51,11 @@ When I looked over the available gems for react/rails integrations, none of them
 
 - This gem does not do server-side rendering, so if you need to do SEO stuff within your react components, it's probably the wrong choice
 
-## Installing the Gem
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'react_rails_webpack'
-```
-
-And then execute:
-
-    $ bundle
-
 ## Requirements
 
-- [Rails](http://rubyonrails.org/) 4.0+
-- [node](https://nodejs.org/) (tested on 4.2.2 and 5.4.1)
-- [npm](https://www.npmjs.com/) (tested on 3.4.0 and 3.5.3)
-
-## Generating the Integration
-
-Run the install generator like this:
-
-    $ rails g react_rails_webpack:install
-
-This will setup a basic react integration with some example components (one standard react component and one using react with redux) under [a client folder](lib/react_rails_webpack/client) in your project's root. Once the generator's run is done, run the commands below (from your project's root):
-
-**Note**: Make sure you have [node](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine before running these.
-
-    $ npm run install   # installs the needed npm packages
-    $ npm run build     # uses webpack to compile your javascript code to your assets folder
-
-Then set the dev server hostname ([instructions](#setting-the-dev-server-hostname)).
+- [Rails](http://rubyonrails.org/) >= 4
+- [node](https://nodejs.org/) >= 4
+- [npm](https://www.npmjs.com/) >= 3
 
 ## Generating an Example Page
 
@@ -131,6 +103,8 @@ export default {
 render_component "CheckoutForm", { customerName: 'Harper' }
 ```
 
+NOTE: Unless you're sure you know what you're doing, do not edit anything in the [client/app](lib/react_rails_webpack/client/app) folder except [the availableComponents file](lib/react_rails_webpack/client/app/availableComponents.js)). Those files are where the integration works it's magic (though of course feel free to read the files to check out how everything works).
+
 ## Adding Trailblazer Integration
 
 Running this generator:
@@ -142,17 +116,50 @@ Will add a [trailblazer](https://github.com/apotonick/trailblazer) cell for reac
 
 ## Working with the Webpack Dev Server
 
-`npm run start` will start a webpack development server with hot reloading that is completely independent of your Rails app. You can see the output of this server on any computer or mobile device on your local network by going to `computer-name.local:3000` (replace `computer-name.local` with [whatever you set hostname to](#setting-the-dev-server-hostname) in the `environment.json` file).
+`npm run start` will start a webpack development server with hot reloading that is completely independent of your Rails app. You can see the output of this server on any computer or mobile device on your local network by going to the appropriate url (which you can find by running `rails g react_rails_webpack:info`). Any changes you make to your component files will be pushed immediately to all devices looking at the page.
+
+## How does this work?
+
+When you run the install generator like this:
+
+    $ rails g react_rails_webpack:install
+
+This gem will setup a basic react integration with some example components (one standard react component and one using react with redux) under [a client folder](lib/react_rails_webpack/client) in your project's root.
+
+The meat of the integration with Rails is in [the client/app folder](lib/react_rails_webpack/client/app), and [the app.js file](lib/react_rails_webpack/client/app.js). When your page loads in Rails, the `react_component` method creates divs that looks like this:
+
+```html
+<div class="react-component-target" data-componentname="ComponentName" data-componentprops="{myProp: 'some value'}">
+  <script>renderLastComponentDiv()</script>
+</div>
+```
+
+That example is what it would look like if you called it like with:
+
+```ruby
+react_component "ComponentName", {myProp: 'some value'}
+```
+
+When your browser hits that `renderLastComponentDiv()` call, it grabs the component name ("ComponentName") from the parent div, then looks it up in [the availableComponents.js file](lib/react_rails_webpack/client/app/availableComponents.js).
+
+NOTE: You MUST list all components that you will render with `react_component` in this file or it won't find anything.
+
+Assuming it finds a component that matches the name, it will immediately render that component within that div, passing in props from the `data-componentprops` attribute. As the page loads, each successive div generated by `react_component` renders this way.
 
 ## Gotchas
 
 ### Forgetting to run `npm run build`
 
-Remember, while your changes to components will hot reload when you use the webpack dev server, they will not show up at all in your Rails app until you run the `npm run build` command.
+Remember, while your changes to components will hot reload when you use the webpack dev server, they will not show up at all in your Rails app until you run the `npm run build` command. And they do NOT hot-reload when run in the context of your Rails app.
 
 ### Forgetting to add components to the `client/src/app/availableComponents.js` file
 
 Components will not be accessible from Rails if you forget to add them here.
+
+### Forgetting to run `rails g react_rails_webpack:new_fork` when cloning your repo on a new machine
+
+`rails g react_rails_webpack:new_fork` sets up [the environment.json file](lib/react_rails_webpack/client/environment.json), which is NOT included in your repo, because it contains information specific to each computer it is generated on.
+
 
 ## Development
 

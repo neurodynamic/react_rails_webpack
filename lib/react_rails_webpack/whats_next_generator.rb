@@ -12,18 +12,18 @@ once the react_rails_webpack:install generator is done running."
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
-      puts "Okay, #{'if you saw any errors'.red} when the \
-#{'npm run install'.white} and #{'npm run build'.white} commands \
-were run just now, try running them again manually."
+      puts "Okay, #{'if you saw any errors'.red.bold} when the \
+#{'npm run install'.white.bold} and #{'npm run build'.white.bold} commands \
+were run just now, try running them again now manually."
       puts
-      puts "#{"If you didn't get any errors".red} you should be good to go, and \
+      puts "#{"If you didn't get any errors".red.bold} you should be good to go, and \
 you can start your live-reloading webpack development server for React \
-by running the #{'npm run start'.white} command and visiting \
-#{(`scutil --get LocalHostName`+'.local:3000').blue} in your browser \
-or any other device on your local network."
+by running the #{'npm run start'.white.bold} command and visiting \
+#{(`scutil --get LocalHostName`.strip+'.local:3000').blue.bold} in your browser \
+or on any other device on your local network (for example: your phone)."
       puts
-      puts "#{'To generate an example page of React components in your Rails app'.red}, \
-run the #{'rails g react_rails_webpack:create_example_page'.white} command."
+      puts "#{'To generate an example page of React components inside your Rails app'.red.bold}, \
+run the #{'rails g react_rails_webpack:create_example_page'.white.bold} command."
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts

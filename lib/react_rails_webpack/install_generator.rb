@@ -87,6 +87,15 @@ module ReactRailsWebpack
     end
 
     def run_npm_install_and_build_and_then_say_whats_next
+      puts
+      puts "-" * `tput cols`.to_i # print line of dashes
+      puts
+      puts "Rails files all setup. Now running #{'npm run install'.white.bold} and \
+#{'npm run build'.white.bold} for you..."
+      puts
+      puts "-" * `tput cols`.to_i # print line of dashes
+      puts
+      
       exec('npm run install && npm run build; rails g react_rails_webpack:whats_next')
     end
 

@@ -7,7 +7,14 @@ module ReactRailsWebpack
 
     source_root(File.join(File.expand_path(File.dirname(__FILE__))))
 
+    def copy_environment_json_file
+      inside 'client' do
+        copy_file 'environment.json'
+      end
+    end
+
     def set_environment_hostname
+
       localhost_name = `scutil --get LocalHostName`.strip
       puts "Setting localhost name to #{localhost_name}..."
 
