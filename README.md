@@ -198,6 +198,12 @@ Components will not be accessible from Rails if you forget to add them here.
 
 `rails g react_rails_webpack:new_fork` sets up [the environment.json file](lib/react_rails_webpack/client/environment.json), which is NOT included in your repo, because it contains information specific to each computer it is generated on.
 
+### npm install vs. npm run install
+
+Usually to install new npm packages, you run the `npm install` command. This will work fine if you do it from the client folder, but it won't work from your project's root, since your package.json file with your project's requirements is in the client folder and not the project's root. However, as a convenience, the project's root has the command `npm run install` which is essentially the same as hopping in and out of the client folder to run `npm install` (it's basically like running `cd client && npm install && cd ..`).
+
+More succinctly: if you're in your project's root folder, use `npm run install` instead of `npm install` to install any new npm package dependencies you've added to the `client/package.json` file.
+
 
 ## Development
 
