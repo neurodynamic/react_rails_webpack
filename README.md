@@ -146,18 +146,18 @@ When you run the install generator like this:
 
 This gem will setup a basic react integration with some example components (one standard react component and one using react with redux) under [a client folder](lib/react_rails_webpack/client) in your project's root.
 
-The meat of the integration with Rails is in [the client/app folder](lib/react_rails_webpack/client/src/app), and [the app.js file](lib/react_rails_webpack/client/src/app.js). When your page loads in Rails, the `react_component` method creates divs that looks like this:
+The meat of the integration with Rails is in [the client/app folder](lib/react_rails_webpack/client/src/app), and [the app.js file](lib/react_rails_webpack/client/src/app.js). When your page loads in Rails, if you call the `react_component` method like this:
+
+```ruby
+react_component :ComponentName, {myProp: 'some value'}
+```
+
+It will create a div that looks like this:
 
 ```html
 <div class="react-component-target" data-componentname="ComponentName" data-componentprops="{myProp: 'some value'}">
   <script>renderLastComponentDiv()</script>
 </div>
-```
-
-That example is what it would look like if you called `react_component` like this:
-
-```ruby
-react_component :ComponentName, {myProp: 'some value'}
 ```
 
 When your browser hits that `renderLastComponentDiv()` call, it grabs the component name (which is "ComponentName" in the example) from the parent div, then looks it up in [the availableComponents.js file](lib/react_rails_webpack/client/src/app/availableComponents.js).
