@@ -22,7 +22,7 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 - node version 4 or greater
 - npm version 3 or greater
 
-## See demo components
+## See the demo components in action
 
 ### On webpack dev server
 
@@ -43,7 +43,7 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 Further explanation of what this does [here](#how-does-this-work).
 
-### Sets up an example page in your Rails app
+### Set up an example page in your Rails app
 
 `rails g react_rails_webpack:create_example_page`
 
