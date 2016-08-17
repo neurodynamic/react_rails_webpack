@@ -18,11 +18,27 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 3. Run `bundle install`
 4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#how-does-this-work))
 
-### Add example page
+### Commands
 
-1. Run `rails g react_rails_webpack:create_example_page`
-2. Start the Rails server (run `rails server`)
-3. Go to [localhost:3000/greeting](http://localhost:3000/greeting) to see your React/Rails integration in action
+#### `rails g react_rails_webpack:install`
+
+Sets up the integration
+
+#### `rails g react_rails_webpack:create_example_page`
+
+Sets up an example page in your Rails app at  [localhost:3000/greeting](http://localhost:3000/greeting) that displays the two example components.
+
+#### `rails g react_rails_webpack:new_fork`
+
+You must run this whenever you clone a repo with a react_rails_webpack integration setup. It generates [the environment.json file](lib/react_rails_webpack/client/environment.json) based on your computer's network name. Since the network name will be different for most computers, this file is gitignored and needs to be regenerated for each new computer the project is cloned on.
+
+#### `rails g react_rails_webpack:info`
+
+This command will tell you the url of your webpack development server on your local network.
+
+#### `rails g react_rails_webpack:trailblazer_integration`
+
+If you use the Trailblazer gem, use this command to add a [trailblazer](https://github.com/apotonick/trailblazer) cell for react components to your `lib` folder.
 
 ### Suggested Development Workflow
 
@@ -50,20 +66,6 @@ When I looked over the available gems for react/rails integrations, none of them
 ### Cons:
 
 - This gem does not do server-side rendering, so if you need to do SEO stuff within your react components, it's probably the wrong choice
-
-## Requirements
-
-- [Rails](http://rubyonrails.org/) >= 4
-- [node](https://nodejs.org/) >= 4
-- [npm](https://www.npmjs.com/) >= 3
-
-## Generating an Example Page
-
-If you want to setup an example page in your Rails app that uses the provided React components, run:
-
-    $ rails g react_rails_webpack:create_example_page
-
-Then run the rails server and go to [the greeting page](http://localhost:3000/greeting) to see everything in action.
 
 ## Creating and using your own components
 
@@ -104,15 +106,6 @@ render_component "CheckoutForm", { customerName: 'Harper' }
 ```
 
 NOTE: Unless you're sure you know what you're doing, do not edit anything in the [client/app](lib/react_rails_webpack/client/app) folder except [the availableComponents file](lib/react_rails_webpack/client/app/availableComponents.js)). Those files are where the integration works it's magic (though of course feel free to read the files to check out how everything works).
-
-## Adding Trailblazer Integration
-
-Running this generator:
-
-    $ rails g react_rails_webpack:trailblazer_integration
-
-Will add a [trailblazer](https://github.com/apotonick/trailblazer) cell for react components to your `lib` folder.
-
 
 ## Working with the Webpack Dev Server
 
