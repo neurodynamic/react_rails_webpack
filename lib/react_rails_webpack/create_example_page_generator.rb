@@ -35,7 +35,7 @@ module ReactRailsWebpack
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
-      puts "Done! Start your Rails server and go to #{"localhost:3000/greeting".blue} to see your React/Rails integration in action!"
+      puts "Done! Start your Rails server and go to #{"localhost:3000/greeting".blue.bold} to see your React/Rails integration in action!"
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
