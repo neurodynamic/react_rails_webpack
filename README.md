@@ -20,23 +20,33 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 ### Commands
 
-#### `rails g react_rails_webpack:install`
+#### Set up the integration
 
-Sets up the integration
+`rails g react_rails_webpack:install`
 
-#### `rails g react_rails_webpack:create_example_page`
+Further explanation of what this does [here](#how-does-this-work)
 
-Sets up an example page in your Rails app at  [localhost:3000/greeting](http://localhost:3000/greeting) that displays the two example components.
+#### Sets up an example page in your Rails app
 
-#### `rails g react_rails_webpack:new_fork`
+`rails g react_rails_webpack:create_example_page`
 
-You must run this whenever you clone a repo with a react_rails_webpack integration setup. It generates [the environment.json file](lib/react_rails_webpack/client/environment.json) based on your computer's network name. Since the network name will be different for most computers, this file is gitignored and needs to be regenerated for each new computer the project is cloned on.
+Sets up an example page in your Rails app at [localhost:3000/greeting](http://localhost:3000/greeting) that displays the two example components.
 
-#### `rake react_rails_webpack:print_server_info`
+#### Configure react_rails_webpack on a new clone of your repo
+
+`rails g react_rails_webpack:new_fork`
+
+**You must run this whenever you clone a repo with a react_rails_webpack integration setup**. It generates [the environment.json file](lib/react_rails_webpack/client/environment.json) based on your computer's network name. Since the network name will be different for most computers, this file is gitignored and needs to be regenerated for each new computer the project is cloned on.
+
+#### See the url of your webpack development server
+
+`rake react_rails_webpack:print_server_info`
 
 This command will tell you the url of your webpack development server on your local network.
 
-#### `rails g react_rails_webpack:trailblazer_integration`
+#### Generate react component Trailblazer cell
+
+`rails g react_rails_webpack:trailblazer_integration`
 
 If you use the Trailblazer gem, use this command to add a [trailblazer](https://github.com/apotonick/trailblazer) cell for react components to your `lib` folder.
 
