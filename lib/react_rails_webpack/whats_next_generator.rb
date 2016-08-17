@@ -12,6 +12,8 @@ once the react_rails_webpack:install generator is done running."
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
+      puts "DONE!"
+      puts
       puts "Okay, #{'if you saw any errors'.red.bold} when the \
 #{'npm run install'.white.bold} and #{'npm run build'.white.bold} commands \
 were run just now, try running them again now manually."

@@ -90,7 +90,7 @@ module ReactRailsWebpack
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
       puts
-      puts "Rails files all setup. Now running #{'npm run install'.white.bold} and \
+      puts "Integration files all setup. Now running #{'npm run install'.white.bold} and \
 #{'npm run build'.white.bold} for you..."
       puts
       puts "-" * `tput cols`.to_i # print line of dashes
