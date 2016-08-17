@@ -190,7 +190,7 @@ Assuming `react_component` finds a component that matches the it's given, it wil
 
 Remember, while your changes to components will hot reload when you use the webpack dev server, they will not show up at all in your Rails app until you run the `npm run build` command. And they do NOT hot-reload when run in the context of your Rails app.
 
-### Forgetting to add components to the [client/src/app/availableComponents.js](react_rails_webpack/client/src/app/availableComponents.js) file
+### Forgetting to add components to the [client/src/app/availableComponents.js](lib/react_rails_webpack/client/src/app/availableComponents.js) file
 
 Components will not be accessible from Rails if you forget to add them here.
 
