@@ -9,7 +9,7 @@ namespace :react_rails_webpack do
     puts
     puts "Okay, #{'if you saw any errors'.red.bold} when the \
 #{'npm run install'.white.bold} and #{'npm run build'.white.bold} commands \
-were run just now, try running them again now manually."
+were run above, try running them again now manually."
     puts
     puts "#{"If you didn't get any errors".red.bold} you should be good to go, and \
 you can start your live-reloading webpack development server for React \
