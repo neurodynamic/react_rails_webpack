@@ -9,48 +9,59 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 3. Automatically sets up working demo examples so you can jump into React immediately
 4. Development server for React components will live update your changes to any device on your local network (including phones)
 
-## Quick Start
-
-### Install
+## Install
 
 1. Make sure you have the [requirements](#requirements) installed
 2. Add `gem 'react_rails_webpack'` to your Gemfile
 3. Run `bundle install`
 4. Run `rails g react_rails_webpack:install` ([further explanation of what this does](#how-does-this-work))
 
-### Commands
+## See demo components
 
-#### Set up the integration
+### On webpack dev server
+
+1. Run the webpack dev server with `npm run start`
+2. Go to the url specified by the `rake react_rails_webpack:print_server_info` command
+
+### On your rails app
+
+1. Generate an example page in rails with the `rails g react_rails_webpack:create_example_page` command
+2. Start your Rails server with `rails s`
+3. Go to [localhost:3000/greeting](localhost:3000/greeting)
+
+## Commands
+
+### Set up the integration
 
 `rails g react_rails_webpack:install`
 
-Further explanation of what this does [here](#how-does-this-work)
+Further explanation of what this does [here](#how-does-this-work).
 
-#### Sets up an example page in your Rails app
+### Sets up an example page in your Rails app
 
 `rails g react_rails_webpack:create_example_page`
 
 Sets up an example page in your Rails app at [localhost:3000/greeting](http://localhost:3000/greeting) that displays the two example components.
 
-#### Configure react_rails_webpack on a new clone of your repo
+### Configure react_rails_webpack on a new clone of your repo
 
 `rails g react_rails_webpack:new_fork`
 
 **You must run this whenever you clone a repo with a react_rails_webpack integration setup**. It generates [the environment.json file](lib/react_rails_webpack/client/environment.json) based on your computer's network name. Since the network name will be different for most computers, this file is gitignored and needs to be regenerated for each new computer the project is cloned on.
 
-#### See the url of your webpack development server
+### See the url of your webpack development server
 
 `rake react_rails_webpack:print_server_info`
 
 This command will tell you the url of your webpack development server on your local network.
 
-#### Generate react component Trailblazer cell
+### Generate react component Trailblazer cell
 
 `rails g react_rails_webpack:trailblazer_integration`
 
 If you use the Trailblazer gem, use this command to add a [trailblazer](https://github.com/apotonick/trailblazer) cell for react components to your `lib` folder.
 
-### Suggested Development Workflow
+## Suggested Development Workflow
 
 1. Write the code for your React components in the [client/src/components](lib/react_rails_webpack/client/src/components) directory
 2. Test your new components with live reloading by running the webpack dev server with the command `npm run start` (note: the base html page for the webpack dev server is based on the html provided to `context.defaultTemplate` in [the webpack.config.js file](lib/react_rails_webpack/client/webpack.config.js))
