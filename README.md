@@ -130,7 +130,7 @@ The meat of the integration with Rails is in [the client/app folder](lib/react_r
 That example is what it would look like if you called `react_component` like this:
 
 ```ruby
-react_component "ComponentName", {myProp: 'some value'}
+react_component :ComponentName, {myProp: 'some value'}
 ```
 
 When your browser hits that `renderLastComponentDiv()` call, it grabs the component name (which is "ComponentName" in the example) from the parent div, then looks it up in [the availableComponents.js file](lib/react_rails_webpack/client/src/app/availableComponents.js).
