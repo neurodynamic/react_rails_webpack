@@ -1,3 +1,5 @@
+require 'colorize'
+
 namespace :react_rails_webpack do
   task :print_server_info do
     puts

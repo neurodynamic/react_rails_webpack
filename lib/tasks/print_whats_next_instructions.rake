@@ -1,3 +1,5 @@
+require 'colorize'
+
 namespace :react_rails_webpack do
   task :print_whats_next_instructions do
     puts
