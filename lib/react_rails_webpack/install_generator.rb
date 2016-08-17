@@ -1,5 +1,6 @@
 require 'rails/generators/base'
 require 'colorize'
+require_relative 'new_fork_generator'
 
 module ReactRailsWebpack
   class InstallGenerator < Rails::Generators::Base
@@ -32,13 +33,6 @@ module ReactRailsWebpack
       end
     end
 
-    def set_environment_hostname
-      localhost_name = `scutil --get LocalHostName`.strip
-      puts "Setting localhost name to #{localhost_name}..."
-
-      gsub_file 'client/environment.json', /<<<LOCALHOST_NAME>>>/, localhost_name
-    end
-
     def add_webpack_asset_inclusion
       puts 'Adding asset includes...'
       # Add webpack folder to application asset paths
@@ -68,6 +62,10 @@ module ReactRailsWebpack
 
       ensure_prepended "@import '../webpack/*\n", 'app/assets/stylesheets/application.scss' if File.exist?('app/assets/stylesheets/application.scss')
       ensure_prepended "@import '../webpack/*\n", 'app/assets/stylesheets/application.sass' if File.exist?('app/assets/stylesheets/application.sass')
+    end
+
+    def run_new_fork_generator
+      Rails::Generators.invoke('new_fork')
     end
 
     def print_reminders
