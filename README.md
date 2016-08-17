@@ -18,9 +18,9 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 ## Requirements
 
-- [Rails](http://rubyonrails.org/) version 4 or greater (check version with `rails -v`)
-- [node](https://nodejs.org) version 4 or greater (check version with `node -v`)
-- [npm](https://www.npmjs.com/) version 3 or greater (check version with `npm -v`)
+- **[Rails](http://rubyonrails.org/)** version **4 or greater** (check version with `rails -v`)
+- **[node](https://nodejs.org)** version **4 or greater** (check version with `node -v`)
+- **[npm](https://www.npmjs.com/)** version **3 or greater** (check version with `npm -v`)
 
 ## See the demo components in action
 
@@ -33,7 +33,7 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 1. Generate an example page in rails with the `rails g react_rails_webpack:create_example_page` command
 2. Start your Rails server with `rails s`
-3. Go to [localhost:3000/greeting](localhost:3000/greeting)
+3. Go to [localhost:3000/greeting](http://localhost:3000/greeting)
 
 ## Commands
 
