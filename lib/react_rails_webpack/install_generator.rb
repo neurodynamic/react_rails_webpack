@@ -65,7 +65,7 @@ module ReactRailsWebpack
     end
 
     def run_new_fork_generator
-      Rails::Generators.invoke('new_fork')
+      Rails::Generators.invoke('react_rails_webpack:new_fork')
     end
 
     def print_reminders
