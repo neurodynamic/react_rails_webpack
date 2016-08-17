@@ -8,6 +8,24 @@ module ReactRailsWebpack
 
     source_root(File.join(File.expand_path(File.dirname(__FILE__))))
 
+    def check_for_node
+      if `which node`.length == 0
+        puts "Looks like you don't have node installed yet."
+        puts "This generator cannot work without node."
+        puts "Go here to install it: #{'https://nodejs.org'.blue}"
+        exit
+      end
+    end
+
+    def check_for_npm
+      if `which npm`.length == 0
+        puts "Looks like you don't have npm installed yet."
+        puts "This generator cannot work without npm."
+        puts "Go here to install the latest version of node (which will include npm): #{'https://nodejs.org'.blue}"
+        exit
+      end
+    end
+
     def setup_client_folder
       puts 'Adding client folder...'
       directory 'client'
@@ -68,14 +86,8 @@ module ReactRailsWebpack
       Rails::Generators.invoke('react_rails_webpack:new_fork')
     end
 
-    def print_reminders
-      puts
-      puts "-" * `tput cols`.to_i # print line of dashes
-      puts
-      puts "Done! Now #{"make sure you have node and npm installed".red.bold}, and then #{"run the".red.bold} #{"npm run install".white.bold} #{"and".red.bold} #{"npm run build".white.bold} #{"commands".red.bold} to finish setting up."
-      puts
-      puts "-" * `tput cols`.to_i # print line of dashes
-      puts
+    def run_npm_install_and_build_and_then_say_whats_next
+      exec('npm run install && npm run build; rails g react_rails_webpack:whats_next')
     end
 
 
