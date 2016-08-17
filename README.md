@@ -18,9 +18,9 @@ A set of Rails generators that create all the necessary boilerplate code (with e
 
 ## Requirements
 
-- [Rails](http://rubyonrails.org/) version 4 or greater (check this with `rails -v`)
-- [node](https://nodejs.org) version 4 or greater (check this with `node -v`)
-- [npm](https://www.npmjs.com/) version 3 or greater (check this with `npm -v`)
+- [Rails](http://rubyonrails.org/) version 4 or greater (check version with `rails -v`)
+- [node](https://nodejs.org) version 4 or greater (check version with `node -v`)
+- [npm](https://www.npmjs.com/) version 3 or greater (check version with `npm -v`)
 
 ## See the demo components in action
 
