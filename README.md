@@ -160,7 +160,7 @@ It will create a div that looks like this:
 </div>
 ```
 
-When your browser hits that `renderLastComponentDiv()` call, it grabs the component name (which is "ComponentName" in the example) from the parent div, then looks it up in [the availableComponents.js file](lib/react_rails_webpack/client/src/app/availableComponents.js).
+When your browser hits that `renderLastComponentDiv()` call, it grabs the component name (which is `ComponentName` in this example) from the parent div, then looks it up in [the availableComponents.js file](lib/react_rails_webpack/client/src/app/availableComponents.js).
 
 NOTE: You MUST list all components that you will render with `react_component` in this file or it won't find anything.
 
