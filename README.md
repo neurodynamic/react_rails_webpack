@@ -39,7 +39,7 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
   - [To configure a new clone of your repo](#configure-react_rails_webpack-on-a-new-clone-of-your-repo)
   - [To see the url of your webpack development server](#see-the-url-of-your-webpack-development-server)
   - [Integrate with Trailblazer](#generate-react-component-trailblazer-cell)
-- [Suggested Development Workflow](#suggested-Development-Workflow)
+- [Suggested development workflow](#suggested-Development-Workflow)
 - [Creating and using your own components](#creating-and-using-your-own-components)
 - [How does this work?](#how-does-this-work)
 - [Gotchas](#gotchas)
