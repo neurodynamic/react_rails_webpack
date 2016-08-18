@@ -67,7 +67,7 @@ When I looked over the available gems for react/rails integrations, none of them
 
 ### Cons:
 
-- This gem does not do server-side rendering, so if you need to do SEO stuff within your react components, it's probably the wrong choice
+- This gem does not do server-side rendering. I don't find this makes much of a difference for my apps in practice, but if it does for you, best avoid. [This post](https://blog.andyet.com/2015/05/18/lazymorphic-apps-bringing-back-static-web) covers some of the reasons I like just doing it this way.
 
 
 ## See the demo components in action
