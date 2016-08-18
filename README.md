@@ -22,8 +22,11 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
 - **[node](https://nodejs.org)** version **4 or greater** (check version with `node -v`)
 - **[npm](https://www.npmjs.com/)** version **3 or greater** (check version with `npm -v`)
 
-## Further Contents
+## Contents
 
+- [Key features](#Key-features)
+- [Install](#install)
+- [Requirements](#Requirements)
 - [About](#about)
   - [Pros](#pros)
   - [Cons](#cons)
