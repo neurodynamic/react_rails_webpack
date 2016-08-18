@@ -65,7 +65,7 @@ This command will tell you the url of your webpack development server on your lo
 
 `rails g react_rails_webpack:trailblazer_integration`
 
-If you use the Trailblazer gem, use this command to add a [trailblazer](https://github.com/apotonick/trailblazer) cell for react components to your `lib` folder.
+If you use [the Trailblazer gem](https://github.com/apotonick/trailblazer), use this command to add a trailblazer cell for react components to your `lib` folder.
 
 ## Suggested Development Workflow
 
