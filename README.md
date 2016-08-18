@@ -24,32 +24,32 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
 
 ## Contents
 
-- [Key features](#key-features)
-- [Install](#install)
-- [Requirements](#requirements)
-- [About](#about)
+- **[Key features](#key-features)**
+- **[Install](#install)**
+- **[Requirements](#requirements)**
+- **[About](#about)**
   - [Pros](#pros)
   - [Cons](#cons)
-- [See the demo components in action](#see-the-demo-components-in-action)
+- **[See the demo components in action](#see-the-demo-components-in-action)**
   - [On webpack dev server](#on-webpack-dev-server)
   - [On your Rails app](#on-your-rails-app)
-- [Commands](#commands)
+- **[Commands](#commands)**
   - [To set up the integration](#set-up-the-integration)
   - [To set up an example page in your Rails app](#set-up-an-example-page-in-your-rails-app)
   - [To configure a new clone of your repo](#configure-react_rails_webpack-on-a-new-clone-of-your-repo)
   - [To see the url of your webpack development server](#see-the-url-of-your-webpack-development-server)
   - [Integrate with Trailblazer](#generate-react-component-trailblazer-cell)
-- [Suggested development workflow](#suggested-development-workflow)
-- [Creating and using your own components](#creating-and-using-your-own-components)
-- [How does this work?](#how-does-this-work)
-- [Gotchas](#gotchas)
+- **[Suggested development workflow](#suggested-development-workflow)**
+- **[Creating and using your own components](#creating-and-using-your-own-components)**
+- **[How does this work?](#how-does-this-work)**
+- **[Gotchas](#gotchas)**
   - [Forgetting to run npm run build](#forgetting-to-run-npm-run-build)
   - [Forgetting to add components to the availableComponents file](#forgetting-to-add-components-to-the-clientsrcappavailablecomponentsjs-file)
   - [Forgetting to run rails g react_rails_webpack:new_fork when cloning your repo on a new machine](#forgetting-to-run-rails-g-react_rails_webpacknew_fork-when-cloning-your-repo-on-a-new-machine)
   - [npm install vs. npm run install](#npm-install-vs-npm-run-install)
-- [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
+- **[Development](#development)**
+- **[Contributing](#contributing)**
+- **[License](#license)**
 
 ## About
 
