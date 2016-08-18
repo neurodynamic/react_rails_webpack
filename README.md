@@ -1,12 +1,12 @@
 # ReactRailsWebpack
 
-Ruby gem for quickly and easily creating highly customizable react/rails integrations using webpack and npm. Has built-in examples of plain and redux-backed React components with ES6/7, JSX, and hot-reloading.
+Ruby gem for quickly and easily creating highly customizable react/rails integrations using webpack and npm.
 
 ## Key Features
 
 1. One-command setup
 2. Use any packages from the npm ecosystem
-3. Automatically sets up working demo examples so you can jump into React immediately
+3. Built-in examples of plain and redux-backed React components
 4. The webpack development server for React components will live update your changes to any device on your local network (including phones)
 
 ## Install
@@ -21,6 +21,51 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
 - **[Rails](http://rubyonrails.org/)** version **4 or greater** (check version with `rails -v`)
 - **[node](https://nodejs.org)** version **4 or greater** (check version with `node -v`)
 - **[npm](https://www.npmjs.com/)** version **3 or greater** (check version with `npm -v`)
+
+## Further Contents
+
+- [About](#about)
+  - [Pros](#pros)
+  - [Cons](#cons)
+- [See the demo components in action](#see-the-demo-components-in-action)
+  - [On webpack dev server](#on-webpack-dev-server)
+  - [On your Rails app](#on-your-rails-app)
+- [Commands](#commands)
+  - [To set up the integration](#set-up-the-integration)
+  - [To set up an example page in your Rails app](#set-up-an-example-page-in-your-rails-app)
+  - [To configure a new clone of your repo](#configure-react_rails_webpack-on-a-new-clone-of-your-repo)
+  - [To see the url of your webpack development server](#see-the-url-of-your-webpack-development-server)
+  - [Integrate with Trailblazer](#generate-react-component-trailblazer-cell)
+- [Suggested Development Workflow](#Suggested-Development-Workflow)
+- [Creating and using your own components](#Creating-and-using-your-own-components)
+- [How does this work?](#How-does-this-work)
+- [Gotchas](#gotchas)
+  - [Forgetting to run npm run build](#forgetting-to-run-npm-run-build)
+  - [Forgetting to add components to the availableComponents file](#forgetting-to-add-components-to-the-clientsrcappavailablecomponentsjs-file)
+  - [Forgetting to run rails g react_rails_webpack:new_fork when cloning your repo on a new machine](#forgetting-to-run-rails-g-react_rails_webpacknew_fork-when-cloning-your-repo-on-a-new-machine)
+  - [npm install vs. npm run install](#npm-install-vs-npm-run-install)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+
+## About
+
+When I looked over the available gems for react/rails integrations, none of them were as customizable as I wanted, so I decided to build my own. Since I wanted it to be as customizable as possible, I made my gem a set of generators, instead of a bunch of under-the-hood gem code. You can customize the inner workings of this integration to your heart's content, since all the files used for the integration will be added directly to your app. You can edit them, delete them, and add or remove any npm packages you like, because this integration allows you to use any npm packages you could use in a static front-end react app.
+
+### Pros:
+
+- [Webpack](https://webpack.github.io/) integration
+- Hot-reloading webpack development server
+- Ability to see dev server output on any computer (or mobile device) on your network
+- Built-in [redux](http://redux.js.org/) integration
+- Generators provide example code for basic react components and react-redux components
+- Highly customizable
+- Ability to use any [npm](https://www.npmjs.com/) packages that you could use on a static front-end app
+
+### Cons:
+
+- This gem does not do server-side rendering, so if you need to do SEO stuff within your react components, it's probably the wrong choice
+
 
 ## See the demo components in action
 
@@ -75,24 +120,6 @@ If you use [the Trailblazer gem](https://github.com/apotonick/trailblazer), use 
 4. Run the `npm run build` command to compile your javascript files and add them to the Rails assets folder
 5. Add calls to the `react_component` helper method in your Rails app to render your React components in views
 6. Make sure they still work, repeat steps 1-5 until satisfied
-
-## About
-
-When I looked over the available gems for react/rails integrations, none of them were as customizable as I wanted, so I decided to build my own. Since I wanted it to be as customizable as possible, I made my gem a set of generators, instead of a bunch of under-the-hood gem code. You can customize the inner workings of this integration to your heart's content, since all the files used for the integration will be added directly to your app. You can edit them, delete them, and add or remove any npm packages you like, because this integration allows you to use any npm packages you could use in a static front-end react app.
-
-### Pros:
-
-- [Webpack](https://webpack.github.io/) integration
-- Hot-reloading webpack development server
-- Ability to see dev server output on any computer (or mobile device) on your network
-- Built-in [redux](http://redux.js.org/) integration
-- Generators provide example code for basic react components and react-redux components
-- Highly customizable
-- Ability to use any [npm](https://www.npmjs.com/) packages that you could use on a static front-end app
-
-### Cons:
-
-- This gem does not do server-side rendering, so if you need to do SEO stuff within your react components, it's probably the wrong choice
 
 ## Creating and using your own components
 
