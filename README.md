@@ -24,9 +24,9 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
 
 ## Contents
 
-- [Key features](#Key-features)
+- [Key features](#key-features)
 - [Install](#install)
-- [Requirements](#Requirements)
+- [Requirements](#requirements)
 - [About](#about)
   - [Pros](#pros)
   - [Cons](#cons)
@@ -39,9 +39,9 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
   - [To configure a new clone of your repo](#configure-react_rails_webpack-on-a-new-clone-of-your-repo)
   - [To see the url of your webpack development server](#see-the-url-of-your-webpack-development-server)
   - [Integrate with Trailblazer](#generate-react-component-trailblazer-cell)
-- [Suggested Development Workflow](#Suggested-Development-Workflow)
-- [Creating and using your own components](#Creating-and-using-your-own-components)
-- [How does this work?](#How-does-this-work)
+- [Suggested Development Workflow](#suggested-Development-Workflow)
+- [Creating and using your own components](#creating-and-using-your-own-components)
+- [How does this work?](#how-does-this-work)
 - [Gotchas](#gotchas)
   - [Forgetting to run npm run build](#forgetting-to-run-npm-run-build)
   - [Forgetting to add components to the availableComponents file](#forgetting-to-add-components-to-the-clientsrcappavailablecomponentsjs-file)
