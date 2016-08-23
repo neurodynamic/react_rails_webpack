@@ -8,4 +8,4 @@
 6. Integration code is added directly to project, making it easy to read and modify
 7. Hot-reloading of components
 8. Time-traveling hot-reloading of React-Redux components
-9. Built-in example of Redux DevTools integration
+9. Built-in Redux DevTools integration for React-Redux components
