@@ -8,4 +8,5 @@
   - Replace "minify" webpack option with custom UglifyJS options
   - Depend on main hjs-webpack repo instead of customized fork (UglifyJS options enabled this)
   - Add .babelrc file
+  - Correct broken redux test
   - Start keeping a changelog
