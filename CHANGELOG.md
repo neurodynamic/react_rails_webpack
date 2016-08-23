@@ -13,3 +13,5 @@
   - Add .babelrc file
   - Correct broken redux test
   - Start keeping a changelog
+
+To upgrade to version 3, update the gem version in your `Gemfile` to version 3, run `bundle install`, delete the `client/node_modules` directory, and run the `rails g react_rails_webpack:install` generator command again.
