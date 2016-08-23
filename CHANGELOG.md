@@ -1,5 +1,8 @@
 ## Changelog
 
+### 3.0.1
+  - Add react-hmre preset to development environment in .babelrc file
+
 ### 3.0.0
   - MANY BIG CHANGES
   - Trim package.json dependencies
