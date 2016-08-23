@@ -8,3 +8,4 @@
 6. Integration code is added directly to project, making it easy to read and modify
 7. Hot-reloading of components
 8. Built-in [Redux DevTools](https://github.com/gaearon/redux-devtools) integration for React-Redux components
+9. Built-in examples of [Redux](https://github.com/gaearon/redux-devtools) reducer testing using [Chai](http://chaijs.com)
