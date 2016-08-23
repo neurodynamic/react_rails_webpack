@@ -1,7 +1,6 @@
 {
   "scripts": {
     "start": "cd client && npm run start",
-    "prebuild": "cd client && npm run prebuild",
     "build": "cd client && npm run build",
     "install": "cd client && npm install",
     "test": "cd client && npm run test"
