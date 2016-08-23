@@ -12,6 +12,8 @@ Ruby gem for quickly and easily creating highly customizable react/rails integra
 3. Built-in examples of plain and [redux](http://redux.js.org)-backed React components
 4. The [webpack](https://webpack.github.io) development server for React components will live update your changes to any device on your local network (including phones)
 
+[more features...](FEATURES.md)
+
 ## Install
 
 1. Make sure you have the [requirements](#requirements) installed
