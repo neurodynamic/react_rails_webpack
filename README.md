@@ -5,7 +5,7 @@
 
 Ruby gem for quickly and easily creating highly customizable react/rails integrations using webpack and npm.
 
-Integrates: [Rails](http://rubyonrails.org), [React](https://facebook.github.io/react), [Webpack](https://webpack.github.io), [Redux](http://redux.js.org), [Redux Devtools](https://github.com/gaearon/redux-devtools)
+Includes working examples using: [React](https://facebook.github.io/react), [Redux](http://redux.js.org), [Redux Devtools](https://github.com/gaearon/redux-devtools), and [Chai](http://chaijs.com/)
 
 ## Key Features
 
