@@ -1,10 +1,9 @@
 # ReactRailsWebpack
-
-Ruby gem for quickly and easily creating highly customizable react/rails integrations using webpack and npm.
-
 [![Gem Version](https://badge.fury.io/rb/react_rails_webpack.svg)](https://badge.fury.io/rb/react_rails_webpack)
 
 > Warning: If you are upgrading across major versions, please read the [release notes in the changelog](CHANGELOG.md).
+
+Ruby gem for quickly and easily creating highly customizable react/rails integrations using webpack and npm.
 
 ## Key Features
 
