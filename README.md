@@ -10,11 +10,13 @@ Ruby gem for quickly creating highly customizable react/rails integrations using
 1. One-command setup
 2. Use any packages from the [npm](https://www.npmjs.com) ecosystem
 3. Built-in examples of plain and [redux](http://redux.js.org)-backed React components
-4. The [webpack](https://webpack.github.io) development server for React components will live update your changes to any device on your local network (including phones)
+4. The [webpack](https://webpack.github.io) development server for React components will live update your changes to any device on your local network (including phones) (gif demo of this feature [here](images/rrw_demo_short.gif))
 
 [more features...](FEATURES.md)
 
 ## Install
+
+> Video demo of setup and use on a new Rails app [here](https://vimeo.com/180349372)
 
 1. Make sure you have the [requirements](#requirements) installed
 2. Add `gem 'react_rails_webpack'` to your Gemfile
