@@ -10,7 +10,7 @@ export const HelloWithRedux = React.createClass({
   },
   render () {
     return <div className='bordered-component'>
-      <h2>This is the "HelloWithRedux" component from 'client/src/components/HelloWithRedux.jsx'</h2>
+      <h2>This is the "HelloWithRedux" component from client/src/components/HelloWithRedux.jsx</h2>
       <p><strong>Details</strong>: {this.props.details}</p>
       <p>Current greeting: {this.props.greeting}</p>
 
