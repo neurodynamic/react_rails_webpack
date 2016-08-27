@@ -2,6 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import * as actionCreators from '../redux/reducer'
 
+import FeatureExamples from './FeatureExamples'
+
 export const HelloWithRedux = React.createClass({
   propTypes: {
     greeting: React.PropTypes.string.isRequired,
@@ -16,6 +18,8 @@ export const HelloWithRedux = React.createClass({
 
       <label htmlFor='greeting'>Change the greeting here: </label>
       <input type='text' id='greeting' value={this.props.greeting} onChange={(e) => this.props.setGreeting(e.target.value)}/>
+
+      <FeatureExamples />
     </div>
   }
 })

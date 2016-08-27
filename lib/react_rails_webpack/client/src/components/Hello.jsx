@@ -1,5 +1,7 @@
 import React from 'react'
 
+import FeatureExamples from './FeatureExamples'
+
 export default React.createClass({
   propTypes: {
     details: React.PropTypes.string.isRequired
@@ -15,6 +17,8 @@ export default React.createClass({
 
       <label htmlFor='greeting'>Change the greeting here: </label>
       <input type='text' id='greeting' value={this.state.greeting} onChange={(e) => this.setState({ greeting: e.target.value })}/>
+
+      <FeatureExamples />
     </div>
   }
 })
