@@ -11,7 +11,10 @@ export default React.createClass({
   },
   render () {
     return <div className='bordered-component'>
-      <h2><ReactLogo /> This is the "Hello" component from <Icon icon='folder-open-o' /> client/src/components/Hello.jsx</h2>
+      <ReactLogo />
+      <h2>This is the "Hello" component</h2>
+
+      <p><strong>Source</strong>: <Icon icon='folder-open-o' /> client/src/components/Hello.jsx</p>
       <p><strong>Details</strong>: {this.props.details}</p>
       <p>Current greeting: {this.state.greeting}</p>
 
