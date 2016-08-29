@@ -1,18 +1,18 @@
 # ReactRailsWebpack
 
+![Image of main demo page with two example React components on it](images/demo_page.png "Image of main demo page with two example React components on it")
+
 [![Gem Version](https://badge.fury.io/rb/react_rails_webpack.svg)](https://badge.fury.io/rb/react_rails_webpack)
 
 > Warning: If you are upgrading across major versions, please read the [release notes in the changelog](CHANGELOG.md).
 
 Ruby gem for quickly creating highly customizable react/rails integrations using webpack and npm.
 
-![Image of main demo page with two example React components on it](images/demo_page.png "Image of main demo page with two example React components on it")
-
 ## Key Features
 
 1. One-command setup
 2. Use any packages from the [npm](https://www.npmjs.com) ecosystem
-3. Built-in examples of plain and [redux](http://redux.js.org)-backed React components
+3. [Built-in examples](images/demo_page.png) of plain and [redux](http://redux.js.org)-backed React components
 4. The [webpack](https://webpack.github.io) development server for React components will live update your changes to any device on your local network (including phones) (gif demo of this feature [here](images/rrw_demo_short.gif))
 
 [more features...](FEATURES.md)
