@@ -13,6 +13,7 @@ export const ReactLogo = () =>
   <img className='react-logo' src={reactImageUrl} />
 
 // USING FONT AWESOME ICONS EXAMPLE COMPONENT
+// Icon list here: http://fontawesome.io/icons/
 import 'font-awesome/scss/font-awesome.scss'
 
 export const Icon = (props) =>

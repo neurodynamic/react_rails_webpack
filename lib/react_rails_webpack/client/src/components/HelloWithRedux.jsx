@@ -12,15 +12,16 @@ export const HelloWithRedux = React.createClass({
   },
   render () {
     return <div className='bordered-component'>
-      <ReactLogo />
-      <h2>This is the "HelloWithRedux" component</h2>
+      <h2><ReactLogo /> This is the HelloWithRedux component</h2>
+      <div className='source'>from the <code>HelloWithRedux.jsx</code> file in <Icon icon='folder-open' /> <code>client/src/components</code></div>
 
-      <p><strong>Source</strong>: <Icon icon='folder-open-o' /> client/src/components/HelloWithRedux.jsx</p>
-      <p><strong>Details</strong>: {this.props.details}</p>
-      <p>Current greeting: {this.props.greeting}</p>
+      <div className='info-block'>
+        <label htmlFor='redux-greeting'><strong>Change greeting</strong>: </label>
+        <input type='text' id='redux-greeting' value={this.props.greeting} onChange={(e) => this.props.setGreeting(e.target.value)}/>
+      </div>
 
-      <label htmlFor='greeting'>Change the greeting here: </label>
-      <input type='text' id='greeting' value={this.props.greeting} onChange={(e) => this.props.setGreeting(e.target.value)}/>
+      <div className='info-block'><strong>Current greeting</strong>: {this.props.greeting}</div>
+      <div className='info-block'><strong>Details</strong>: {this.props.details}</div>
     </div>
   }
 })

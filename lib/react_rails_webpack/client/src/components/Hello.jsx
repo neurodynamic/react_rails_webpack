@@ -11,15 +11,17 @@ export default React.createClass({
   },
   render () {
     return <div className='bordered-component'>
-      <ReactLogo />
-      <h2>This is the "Hello" component</h2>
+      <h2><ReactLogo /> This is the Hello component</h2>
+      <div className='source'>from the <code>Hello.jsx</code> file in <Icon icon='folder-open' /> <code>client/src/components</code></div>
 
-      <p><strong>Source</strong>: <Icon icon='folder-open-o' /> client/src/components/Hello.jsx</p>
-      <p><strong>Details</strong>: {this.props.details}</p>
-      <p>Current greeting: {this.state.greeting}</p>
+      <div className='info-block'>
+        <label htmlFor='greeting'><strong>Change greeting</strong>: </label>
+        <input type='text' id='greeting' value={this.state.greeting} onChange={(e) => this.setState({ greeting: e.target.value })}/>
+      </div>
 
-      <label htmlFor='greeting'>Change the greeting here: </label>
-      <input type='text' id='greeting' value={this.state.greeting} onChange={(e) => this.setState({ greeting: e.target.value })}/>
+      <div className='info-block'><strong>Current greeting</strong>: {this.state.greeting}</div>
+
+      <div className='info-block'><strong>Details</strong>: {this.props.details}</div>
     </div>
   }
 })
