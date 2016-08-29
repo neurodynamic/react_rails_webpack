@@ -1,5 +1,9 @@
 ## Changelog
 
+### 3.1.0
+  - Improve look of example components
+  - Add examples of using Font Awesome and image files
+
 ### 3.0.1
   - Add react-hmre preset to development environment in .babelrc file
 
