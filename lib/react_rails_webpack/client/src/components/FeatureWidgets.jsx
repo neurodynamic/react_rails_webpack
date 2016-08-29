@@ -17,6 +17,6 @@ export const ReactLogo = () =>
 import 'font-awesome/scss/font-awesome.scss'
 
 export const Icon = (props) =>
-        <i className={'fa fa-' + props.icon}></i>
+  <i className={'fa fa-' + props.icon}></i>
 
 Icon.propTypes = { icon: React.PropTypes.string.isRequired }
