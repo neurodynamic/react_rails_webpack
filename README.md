@@ -1,4 +1,7 @@
 # ReactRailsWebpack
+
+![Image of main demo page with two example React components on it](images/demo_page.png "Image of main demo page with two example React components on it")
+
 [![Gem Version](https://badge.fury.io/rb/react_rails_webpack.svg)](https://badge.fury.io/rb/react_rails_webpack)
 
 > Warning: If you are upgrading across major versions, please read the [release notes in the changelog](CHANGELOG.md).
