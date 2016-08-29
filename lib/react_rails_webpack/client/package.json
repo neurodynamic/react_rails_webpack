@@ -6,6 +6,7 @@
   "scripts": {
     "start": "hjs-dev-server",
     "build": "NODE_ENV=production webpack",
+    "postbuild": "ruby copy_fonts.rb",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'"
   },
   "author": "",
