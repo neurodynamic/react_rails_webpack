@@ -37,6 +37,7 @@ Ruby gem for quickly creating highly customizable react/rails integrations using
 ## Contents
 
 - **[Key features](#key-features)**
+- **[Built-in Demo Page](#built-in-demo-page)**
 - **[Install](#install)**
 - **[Requirements](#requirements)**
 - **[About](#about)**
