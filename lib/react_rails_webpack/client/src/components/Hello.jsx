@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FeatureExamples from './FeatureExamples'
+import {ReactLogo, Icon} from './FeatureWidgets'
 
 export default React.createClass({
   propTypes: {
@@ -11,14 +11,12 @@ export default React.createClass({
   },
   render () {
     return <div className='bordered-component'>
-      <h2>This is the "Hello" component from client/src/components/Hello.jsx</h2>
+      <h2><ReactLogo /> This is the "Hello" component from <Icon icon='folder-open-o' /> client/src/components/Hello.jsx</h2>
       <p><strong>Details</strong>: {this.props.details}</p>
       <p>Current greeting: {this.state.greeting}</p>
 
       <label htmlFor='greeting'>Change the greeting here: </label>
       <input type='text' id='greeting' value={this.state.greeting} onChange={(e) => this.setState({ greeting: e.target.value })}/>
-
-      <FeatureExamples />
     </div>
   }
 })
