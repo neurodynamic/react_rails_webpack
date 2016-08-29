@@ -9,3 +9,4 @@
 7. Hot-reloading of components
 8. Built-in [Redux DevTools](https://github.com/gaearon/redux-devtools) integration for React-Redux components
 9. Built-in examples of [Redux](https://github.com/gaearon/redux-devtools) reducer testing using [Chai](http://chaijs.com)
+10. Built-in examples for using [Font Awesome](http://fontawesome.io/) icons and images (as of version 3.1.0)
